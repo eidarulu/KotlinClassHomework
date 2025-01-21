@@ -1,6 +1,10 @@
 package com.example.kotlinclasshomework.kotlinClass
 
-open class Employee {
+open class Employee(name: String) {
+
+    constructor(name: String, company: String) : this(name) {
+        println("Меня зовут $name, я работаю в компании $company")
+    }
 
     fun work() {
         println("Усердно работаю")
@@ -15,28 +19,21 @@ open class Employee {
     }
 }
 
+class AndroidDeveloper() : Employee("Yeldos Amire", "Kolesa Group") {
 
-class Programmer() : Employee() {
     override fun haveLunch() {
         super.haveLunch()
         println("А потом еще и за кофеечком")
     }
-}
 
-
-class Designer : Employee() {
-
-    override fun haveLunch() {
-        println("Иду на обед в 15.00")
+    override fun goHome() {
+        println("Еду домой на Kia K5")
     }
 }
 
-
-class Teamlead : Employee() {
+class Teamlead : Employee("Sanatzhan Aimukhambetov", "Kolesa Group") {
 
     override fun haveLunch() {
         println("Сегодня пропущу обед")
     }
 }
-
-// TODO здесь можно создать новый класс, который будет наследоваться от класса Employee. Не забудьте переопределить методы haveLunch() и goHome()
