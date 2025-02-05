@@ -17,7 +17,7 @@ object AnalyticsModule {
 
     @Provides
     @ActivityScoped
-    fun provideAnalytics(tag: String): Analytics {
-        return AnalyticsImpl(tag)
+    fun provideAnalytics(tag2: String): Analytics {
+        return AnalyticsImpl(tag2)
     }
 }

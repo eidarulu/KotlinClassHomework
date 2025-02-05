@@ -30,10 +30,3 @@ class AndroidDeveloper() : Employee("Yeldos Amire", "Kolesa Group") {
         println("Еду домой на Kia K5")
     }
 }
-
-class Teamlead : Employee("Sanatzhan Aimukhambetov", "Kolesa Group") {
-
-    override fun haveLunch() {
-        println("Сегодня пропущу обед")
-    }
-}
